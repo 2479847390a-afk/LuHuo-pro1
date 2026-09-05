@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC",
+    "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
+  --color-ink: #1a1a1a;
+  --color-muted: #6b6b6b;
+  --color-line: #ecece8;
+  --color-paper: #f6f6f4;
+  --color-card: #ffffff;
+  --color-warn: #c45c26;
+  --color-warn-bg: #fff4ec;
+  --color-profit: #1f7a4d;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+.field {
+  width: 100%;
+  border: 0;
+  border-radius: 1rem;
+  background: var(--color-paper);
+  padding: 0.7rem 0.85rem;
+  font-size: 0.875rem;
+  color: var(--color-ink);
+  outline: none;
+}
+
+.field::placeholder {
+  color: #b0b0aa;
+}
+
+input[type='date'].field {
+  min-height: 2.7rem;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
